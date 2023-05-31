@@ -10,7 +10,7 @@ export default function App() {
           <img src={image1} className="App-logo img-fluid" alt="logo" />
         </header>
         <main>
-          <Dictionary />
+          <Dictionary defaultKeyword="hello" />
         </main>
         <footer className="App-footer">coded by Fidelis</footer>
       </div>
