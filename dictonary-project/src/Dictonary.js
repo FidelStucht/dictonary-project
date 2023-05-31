@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 import "./Dictonary.css";
 import axios from "axios";
+import Results from "./Results";
 
 export default function Dictonary() {
   let [keyword, setKeyword] = useState("");
+  let [results, setResults] = useState(null);
 
   function handleResponse(response) {
-    console.log(response.data);
+    setResults(response.data[0]);
   }
   function search(event) {
     event.preventDefault();
-    let key = "370f6ctbab902413o43b492fe5060b44";
-
-    let apiUrl = `https://api.shecodes.io/dictionary/v1/define?word=${keyword}&key=${key}`;
+    let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${keyword}`;
     axios.get(apiUrl).then(handleResponse);
   }
   function handleKeywordChange(event) {
@@ -24,6 +24,7 @@ export default function Dictonary() {
       <form onSubmit={search}>
         <input type="search" onChange={handleKeywordChange} />
       </form>
+      <Results results={results} />
     </div>
   );
 }
