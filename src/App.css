@@ -1,5 +1,6 @@
 body {
   background: #f9f8fe;
+  max-width: 960px;
 }
 
 a {
