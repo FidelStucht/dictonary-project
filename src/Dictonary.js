@@ -4,7 +4,7 @@ import axios from "axios";
 import Results from "./Results";
 
 export default function Dictonary(props) {
-  let [keyword, setKeyword] = useState("");
+  let [keyword, setKeyword] = useState("sun");
   let [results, setResults] = useState(null);
   let [loaded, setLoaded] = useState(false);
 
