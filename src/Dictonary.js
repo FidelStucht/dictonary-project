@@ -16,10 +16,7 @@ export default function Dictonary(props) {
   function handlePexelsResponse(response) {
     setPhotos(response.data.photos);
   }
-  function handleSubmit(event) {
-    event.preventDefault();
-    search();
-  }
+
   function search() {
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${keyword}`;
     axios.get(apiUrl).then(handleResponse);
@@ -30,7 +27,10 @@ export default function Dictonary(props) {
     let headers = { Authorization: `Bearer ${pexelsApiKey}` };
     axios.get(pexelsApiUrl, { headers: headers }).then(handlePexelsResponse);
   }
-
+  function handleSubmit(event) {
+    event.preventDefault();
+    search();
+  }
   function handleKeywordChange(event) {
     setKeyword(event.target.value);
   }
