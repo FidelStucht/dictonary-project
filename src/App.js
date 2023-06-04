@@ -1,6 +1,6 @@
 import "./App.css";
 import image1 from "./image1.JPG";
-import Dictonary from "./Dictonary";
+import Dictionary from "./Dictonary";
 
 export default function App() {
   return (
@@ -10,7 +10,7 @@ export default function App() {
           <img src={image1} className="App-logo img-fluid" alt="logo" />
         </header>
         <main>
-          <Dictonary defaultKeyword="sun" />
+          <Dictonary defaultKeyword="hello" />
         </main>
         <footer className="App-footer">coded by Fidelis</footer>
       </div>
