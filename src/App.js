@@ -1,6 +1,7 @@
 import "./App.css";
 import image1 from "./image1.JPG";
-import Dictionary from "./Dictonary";
+import Dictonary from "./Dictonary";
+import React from "react";
 
 export default function App() {
   return (
